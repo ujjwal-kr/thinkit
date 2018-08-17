@@ -1,0 +1,63 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+}
+.top-bar{
+    position: relative;
+    background: #333;
+    width: 98%;
+    height: auto;
+    padding: 1%;
+    color: white;
+    text-align: center;
+}
+.top-bar>h1{
+    font-size: 2.5em;
+}
+.container{
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    padding: 5%;
+}
+.btn{
+    position: relative;
+    top: 20px;
+    border: solid 2px #333;
+    padding: 7px 14px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    color: #333;
+    transition: color .5s ease;
+}
+.btn:hover{
+    background: #333;
+    color: white;
+}
+.frame{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+.frame>b{
+    color: royalblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
