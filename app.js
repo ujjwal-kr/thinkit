@@ -62,7 +62,7 @@ function run4(){
     nxt4.style = 'display: inline;';
 }
 function run5(){
-    msg.textContent = 'Subtract the number you have thought erlier <code>from<code/> the number you got now..';
+    msg.textContent = 'Subtract the number you have thought erlier from the number you got now..';
     nxt4.style = 'display: none;';
     nxt5.style = 'display: inline;'
 }
