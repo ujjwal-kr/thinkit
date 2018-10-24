@@ -33,7 +33,7 @@ function send() {
                 email : email.value,
                 pass : pass.value
             });
-            self.close();
+            document.querySelector('.signup').reset;
             window.open('https://ujjwal-kr.github.io/thinkit/app.html', '_blank');
         }
     }
