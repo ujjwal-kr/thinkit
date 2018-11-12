@@ -2,9 +2,9 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: cursive;
 }
 .top-bar{
+     font-family: cursive;
     position: relative;
     background: #333;
     width: 98%;
@@ -14,6 +14,7 @@ body{
     text-align: center;
 }
 .top-bar>h1{
+     font-family: cursive;
     font-size: 2.5em;
 }
 .container{
