@@ -49,7 +49,9 @@ body{
 .frame>b{
     color: royalblue;
 }
-
+#msg{
+     font-family: monospace;
+}
 
 
 
