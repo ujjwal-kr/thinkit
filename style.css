@@ -27,17 +27,17 @@ body{
 .btn{
     position: relative;
     top: 20px;
-    border: solid 2px #333;
+    border: solid 2px #6600ff;
     padding: 7px 14px;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: normal;
     font-size: 2em;
-    color: #333;
+    color: #6600ff;
     transition: color .5s ease;
 }
 .btn:hover{
-    background: #333;
+    background: #6600ff;
     color: white;
 }
 .frame{
