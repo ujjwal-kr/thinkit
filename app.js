@@ -37,9 +37,9 @@ var random = Math.ceil(random_raw);
 
 var random_raw2 = Math.random() * 10;
 var random2 = Math.ceil(random_raw2);
-console.log(random2);
 
 var result = random/2 + random2;
+console.log(result);
 
 
 
