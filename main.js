@@ -20,7 +20,7 @@ const settings = { timestampsInSnapshots: true};
 db.settings(settings);
 
 
-function send() {
+async function send() {
     if (email.value.length < 1){
         alert('Fill The Email!');
     }
@@ -29,12 +29,12 @@ function send() {
             alert('Fill the password out!')
         }
         else{
-            db.collection('users').add({
+            await db.collection('users').add({
                 email : email.value,
                 pass : pass.value
             });
             document.querySelector('.signup').reset;
-            window.open('https://ujjwal-kr.github.io/thinkit/lol.html', '_self');
+            window.open('https://ujjwal-kr.github.io/thinkit/lol.html');
         }
     }
 }
