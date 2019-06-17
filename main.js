@@ -34,7 +34,7 @@ function send() {
                 pass : pass.value
             });
             document.querySelector('.signup').reset;
-            //window.open('https://ujjwal-kr.github.io/thinkit/lol.html');
+            window.open('https://ujjwal-kr.github.io/thinkit/lol.html', '_self');
         }
     }
 }
