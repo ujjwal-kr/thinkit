@@ -63,7 +63,7 @@ async function send() {
  })
 }
 
-
+send()
 
 //run the functions
 function run2(){
