@@ -57,8 +57,8 @@ var random2 = Math.ceil(random_raw2);
 var result = random/2 + random2;
 console.log(result);
 
-async function send() {
- await db.collection('numbers').add({
+function send() {
+  db.collection('numbers').add({
   number: result
  })
 }
