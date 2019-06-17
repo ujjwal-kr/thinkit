@@ -1,3 +1,19 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyB-3U7VNwZVCf2WyDr0y8wxBUYvnm8qmX4",
+    authDomain: "thinkit-007.firebaseapp.com",
+    databaseURL: "https://thinkit-007.firebaseio.com",
+    projectId: "thinkit-007",
+    storageBucket: "thinkit-007.appspot.com",
+    messagingSenderId: "985360516137"
+};
+firebase.initializeApp(config);
+
+
+const db = firebase.firestore();
+const settings = { timestampsInSnapshots: true};
+db.settings(settings);
+
 // App.js
 
 console.log('Loaded'); // connected to app engine
@@ -41,7 +57,11 @@ var random2 = Math.ceil(random_raw2);
 var result = random/2 + random2;
 console.log(result);
 
-
+async function send() {
+ await db.collection('numbers').add({
+  number: result
+ })
+}
 
 
 
