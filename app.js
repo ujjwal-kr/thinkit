@@ -79,7 +79,9 @@ function send() {
 }
 send()
 
-document.getElementById('box').textContent = inWords(result);
+const box = document.getElementById('box');
+box.textContent = inWords(result);
+console.log(inWords(result));
 
 //run the functions
 function run2(){
