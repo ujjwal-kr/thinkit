@@ -81,7 +81,9 @@ send()
 
 const box = document.getElementById('box');
 box.textContent = inWords(result);
-console.log(inWords(result));
+if (!inWords(result)) {
+    box.textContent = result;
+}
 
 //run the functions
 function run2(){
