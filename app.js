@@ -30,9 +30,6 @@ function inWords (num) {
     return str;
 }
 
-document.getElementById('number').onkeyup = function () {
-    document.getElementById('words').innerHTML = inWords(document.getElementById('number').value);
-};
 console.log('Loaded'); // connected to app engine
 //dom loader
 const nxt1 = document.getElementById('btn-1');
