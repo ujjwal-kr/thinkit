@@ -76,7 +76,7 @@ function send() {
   number: result
  })
 }
-//send()
+send()
 
 const box = document.getElementById('box');
 box.textContent = inWords(result);
