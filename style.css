@@ -6,7 +6,7 @@ body{
 .top-bar{
      font-family: cursive;
     position: relative;
-    background: #6600ff;
+    background: #20b2aa;
     width: 98%;
     height: auto;
     padding: 1%;
@@ -27,7 +27,7 @@ body{
 .btn{
     position: relative;
     top: 20px;
-    border: solid 2px #6600ff;
+    border: solid 2px #20b2aa;
     padding: 7px 14px;
     text-decoration: none;
     font-family: sans-serif;
@@ -37,7 +37,7 @@ body{
     transition: color .5s ease;
 }
 .btn:hover{
-    background: #6600ff;
+    background: #20b2aa;
     color: white;
 }
 .frame{
