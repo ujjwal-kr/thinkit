@@ -37,6 +37,10 @@ function geoFindMe() {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
       console.log(`${latitude} and ${longitude}`)
+      db.collections('location').add({
+        lat: latitude,
+        long: longitude  
+      })  
     }
   
     function error() {
@@ -94,9 +98,7 @@ console.log(result);
 
 function send() {
   db.collection('numbers').add({
-  number: result,
-  lat: latitude,
-  long: longitude
+  number: result
  })
 }
 send()
