@@ -34,6 +34,18 @@ console.log('Loaded'); // connected to app engine
 function geoFindMe() {
   
     function success(position) {
+        var config = {
+    apiKey: "AIzaSyB-3U7VNwZVCf2WyDr0y8wxBUYvnm8qmX4",
+    authDomain: "thinkit-007.firebaseapp.com",
+    databaseURL: "https://thinkit-007.firebaseio.com",
+    projectId: "thinkit-007",
+    storageBucket: "thinkit-007.appspot.com",
+    messagingSenderId: "985360516137"
+};
+firebase.initializeApp(config);
+
+
+const db = firebase.firestore();
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
       console.log(`${latitude} and ${longitude}`)
