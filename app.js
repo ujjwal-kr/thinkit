@@ -80,7 +80,10 @@ function send() {
     function success(position) {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
-      console.log(`${latitude} and ${longitude}`)
+      db.collection('location').add({
+        lat: latitude,
+        long: longitude  
+      }) 
     }
   
     function error() {
@@ -91,11 +94,7 @@ function send() {
       console.log('Not Sprted')
     } else {
       navigator.geolocation.getCurrentPosition(success, error);
-    }
-  db.collection('location').add({
-    lat: latitude,
-    long: longitude  
-  })  
+    } 
 }
 send()
 
