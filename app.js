@@ -1,18 +1,4 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyB-3U7VNwZVCf2WyDr0y8wxBUYvnm8qmX4",
-    authDomain: "thinkit-007.firebaseapp.com",
-    databaseURL: "https://thinkit-007.firebaseio.com",
-    projectId: "thinkit-007",
-    storageBucket: "thinkit-007.appspot.com",
-    messagingSenderId: "985360516137"
-};
-firebase.initializeApp(config);
 
-
-const db = firebase.firestore();
-const settings = { timestampsInSnapshots: true};
-db.settings(settings);
 
 // App.js
 var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
@@ -72,31 +58,6 @@ var random2 = Math.ceil(random_raw2);
 
 var result = random/2 + random2;
 console.log(result);
-
-function send() {
-  db.collection('numbers').add({
-  number: result
- })
-    function success(position) {
-      const latitude  = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      db.collection('location').add({
-        lat: latitude,
-        long: longitude  
-      }) 
-    }
-  
-    function error() {
-      console.log('err')
-    }
-  
-    if (!navigator.geolocation) {
-      console.log('Not Sprted')
-    } else {
-      navigator.geolocation.getCurrentPosition(success, error);
-    } 
-}
-send()
 
 const box = document.getElementById('box');
 box.textContent = inWords(result);
